@@ -1,0 +1,12 @@
+print("CAR DEALERSHIP CART")
+item_num = int(input("NUMBER OF PARTS.\n"))
+item_list = [str(input("Part #" + str(count + 1) + " \n")) for count in range(item_num)]
+item_price = [int(input("Price #" + str(count + 1) + " \n")) for count in range(item_num)]
+item_quan = [int(input("quantity #" + str(count + 1) + " \n")) for count in range(item_num)]
+subtotal = sum(int(quan * price) for quan, price in zip(item_quan, item_price))
+print ("SUBTOTAL=")
+print (subtotal)
+tax = 0.18 * subtotal
+total = subtotal + tax
+print ("GRAND TOTAL=")
+print (total)
